@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta charset="utf-8" />
+     <title>Color tester</title>
+   </head>
+   <body>
+      <div id="text" style="color: #FF7523 ">
+            <h1>Introduce Color:</h1>  
+      </div>
+      <input type="text" style="background: #FF7523" id="colorFondo" placeholder="#000000"/>
+  
+      <script type="text/javascript" charset="utf-8">
+        elementEvent = document.getElementById("colorFondo");
+        var colorInicial = "#000000";
+        if(elementEvent.value == ""){
+            document.body.style.backgroundColor = colorInicial;    
+        }
+        elementEvent.addEventListener("input", handler);
+        function handler(){
+            if(elementEvent.value == ""){
+                document.body.style.backgroundColor = colorInicial;    
+            } else {
+     		    document.body.style.backgroundColor = this.value;
+            }
+        }
+      </script>
+   </body>
+  
+</html>
